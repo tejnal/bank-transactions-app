@@ -1,0 +1,28 @@
+spring:
+  thymeleaf:
+    check-template: true
+    check-template-location: true
+    enabled: true
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+
+
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+
+message:
+  DuplicateName: This username is already exists
+  DuplicateEmail: This email is already registered
+  PasswordNotMatch: Passwords don't match.
